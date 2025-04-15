@@ -1,6 +1,6 @@
 <?php
 
-require_once '../Config/DatabaseConfig.php';
+require_once 'src/Config/DatabaseConfig.php';
 
 class User
 {
@@ -60,8 +60,10 @@ class User
         try {
             $mysql = DatabaseConfig::getConnection();
 
+            $sql = "SELECT * FROM user WHERE email = '$email';";
+            $result = $mysql->query($sql);
+            return $result->fetch_assoc()['password'];
 
-            $mysql->query("");
         } catch (Exception $ex) {
             echo $ex->getMessage();
         }

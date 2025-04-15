@@ -1,12 +1,17 @@
 <?php
 
-require_once '../Model/User.php';
+require_once 'src/Model/User.php';
 
 class UserService{
     static function login($email, $password){
 
-        $modelResult =  User::login($email);
-        
+        $hashedPassword = User::login($email);
+
+        if(password_verify($password, $hashedPassword)){
+            return true;
+        }else{
+            return false;
+        }
     }
 
     static function register($user){
@@ -14,6 +19,6 @@ class UserService{
         $password = $user->getPassword();
         $user->setPassword(password_hash($password, PASSWORD_DEFAULT));
 
-        return UserService::register($user);
+        return User::register($user);
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-require_once '../Service/UserService.php';
+require_once 'src/Service/UserService.php';
 
 class UserController{
 
@@ -9,7 +9,11 @@ class UserController{
         $password = $_POST['password'];
 
         $result = UserService::login($email, $password);
-
+        if($result){
+            echo 'User Logged In';
+        }else{
+            echo 'Invalid Credencials';
+        }
     }
 
     static function register(){
