@@ -1,5 +1,4 @@
 <?php
-
 require_once 'src/Service/UserService.php';
 
 class UserController{
