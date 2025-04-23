@@ -1,0 +1,13 @@
+{
+    "name": "takac/aop-demo",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Takac\\AopDemo\\": "src/"
+        }
+    },
+    "require": {
+        "steampixel/simple-php-router": "^0.7.1",
+        "okapi/aop": "^1.2"
+    }
+}
