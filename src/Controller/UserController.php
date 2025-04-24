@@ -3,7 +3,8 @@ require_once 'src/Service/UserService.php';
 
 class UserController{
 
-    static function login(){
+    public function login($message = "default"){
+        var_dump($message);
         $email = $_POST['email'];
         $password = $_POST['password'];
 

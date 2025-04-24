@@ -1,6 +1,5 @@
 <?php
 require "src/Controller/UserController.php";
-
 use InvalidArgumentException;
 use Okapi\Aop\Attributes\After;
 use Okapi\Aop\Attributes\Around;
@@ -16,9 +15,11 @@ class UserControllerAspect
     #[Before(
         class: UserController::class,
         method: 'login',
+        interceptTraitMethods: true
+        
     )]
     public function echoLogin(BeforeMethodInvocation $invocation): void
     {
-       var_dump("csa this is login");
+       $invocation->setArgument('message','Other message');
     }
 }

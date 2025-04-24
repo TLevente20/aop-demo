@@ -9,7 +9,8 @@ Route::add('/', function() {
 });
 
 Route::add('/login', function() {
-  return UserController::login();
+  $userController = new UserController();
+  return $userController->login();
 },'post');
 
 Route::add('/register', function() {
