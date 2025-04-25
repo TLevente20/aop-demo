@@ -1,6 +1,7 @@
 <?php
 
-require_once 'src/Model/User.php';
+namespace App\Service;
+use App\Model\User;
 
 class UserService{
     static function login($email, $password){

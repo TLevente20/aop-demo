@@ -1,4 +1,7 @@
 <?php
+namespace App\Config;
+use mysqli;
+
 class DatabaseConfig{
     private static $host = 'localhost';
     private static $username = 'root';

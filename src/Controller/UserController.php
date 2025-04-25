@@ -1,34 +1,30 @@
 <?php
 
-require_once 'src/Service/UserService.php';
+namespace App\Controller;
 
-class UserController{
+use App\Service\UserService;
+use App\Model\User;
 
-    static function login(){
+class UserController
+{
+    public function login()
+    {
         $email = $_POST['email'];
         $password = $_POST['password'];
 
         $result = UserService::login($email, $password);
-        if($result){
-            echo 'User Logged In';
-        }else{
-            echo 'Invalid Credencials';
-        }
+        echo $result ? 'User Logged In' : 'Invalid Credentials';
     }
 
-    static function register(){
+    public function register()
+    {
         $name = $_POST['name'];
         $email = $_POST['email'];
         $password = $_POST['password'];
 
-        $user = new User($name,$email,$password);
+        $user = new User($name, $email, $password);
         $result = UserService::register($user);
 
-        if($result){
-            echo 'User Registered';
-        }else{
-            echo 'Registration Failed';
-        }
-
+        echo $result ? 'User Registered' : 'Registration Failed';
     }
 }

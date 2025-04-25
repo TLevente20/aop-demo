@@ -1,6 +1,7 @@
 <?php
-
-require_once 'src/Config/DatabaseConfig.php';
+namespace App\Model;
+use App\Config\DatabaseConfig;
+use Exception;
 
 class User
 {

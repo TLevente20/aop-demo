@@ -3,11 +3,14 @@
     "type": "project",
     "autoload": {
         "psr-4": {
-            "Takac\\AopDemo\\": "src/"
+            "Takac\\AopDemo\\": "src/",
+            "App\\": "src/",
+            "Aspect\\": "aspect/",
+            "Kernel\\": "kernel/"
         }
     },
     "require": {
-        "steampixel/simple-php-router": "^0.7.1",
-        "okapi/aop": "^1.2"
+        "goaop/framework": "^2.3",
+        "steampixel/simple-php-router": "^0.7.1"
     }
 }
