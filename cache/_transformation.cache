@@ -1,0 +1,22 @@
+<?php return array (
+  AOP_ROOT_DIR . '\\Controller\\UserController.php' => 
+  array (
+    'filemtime' => 1745584244,
+    'cacheUri' => AOP_CACHE_DIR . '\\Controller\\UserController.php',
+  ),
+  AOP_ROOT_DIR . '\\Service\\UserService.php' => 
+  array (
+    'filemtime' => 1745584244,
+    'cacheUri' => NULL,
+  ),
+  AOP_ROOT_DIR . '\\Model\\User.php' => 
+  array (
+    'filemtime' => 1745584244,
+    'cacheUri' => NULL,
+  ),
+  AOP_ROOT_DIR . '\\Config\\DatabaseConfig.php' => 
+  array (
+    'filemtime' => 1745584244,
+    'cacheUri' => NULL,
+  ),
+);

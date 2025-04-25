@@ -11,6 +11,8 @@
     },
     "require": {
         "goaop/framework": "^2.3",
-        "steampixel/simple-php-router": "^0.7.1"
+        "steampixel/simple-php-router": "^0.7.1",
+        "nikic/php-parser": "^4.6",
+        "goaop/parser-reflection": "^2.1"
     }
 }

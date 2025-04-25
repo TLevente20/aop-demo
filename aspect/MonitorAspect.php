@@ -9,7 +9,8 @@ use Go\Lang\Annotation\Before;
 class MonitorAspect implements Aspect
 {
     /**
-     * @Before("execution(public App\\Controller\\UserController->login(*))")
+     * @param MethodInvocation $invocation Invocation
+     * @Before("execution(public App\Controller\UserController->login(*))")
      */
     public function beforeLogin(MethodInvocation $invocation)
     {
